@@ -24,6 +24,11 @@ public class EventController {
 
 		return eventService.getAll();
 	}
+	
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
+	public void find(@PathVariable Long id) {
+		eventService.find(id);
+	}
 
 	@RequestMapping(method = RequestMethod.POST)
 	public Event Save(@RequestBody Event item) {
