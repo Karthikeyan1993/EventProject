@@ -1,0 +1,373 @@
+body {
+    font-family: "Segoe UI Light", "Segoe UI", "Segoe WP", "Helvetica Neue",
+    sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333;
+    background: #f4f7f6;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP",
+    sans-serif;
+    font-weight: 100;
+    line-height: 1.1;
+    color: inherit;
+}
+
+.introContainer h1 {
+    font-size: 72px;
+}
+
+.image_overlay {
+    background-image: url('../app/img/bg_pattern.png');
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.banner-Image {
+    background: url('../app/img/confbg.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.banner-text {
+    text-align: center;
+    color: white;
+    z-index: 3;
+}
+
+.landing-text-pos {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+}
+
+.regi-Mark {
+    font-size: 14px;
+    position: relative;
+    top: -50px;
+    font-weight: bold;
+}
+
+.clock-Container {
+    text-align: center;
+}
+
+.clock-Container div {
+    display: inline-block;
+}
+
+.days, .hours, .minutes, .seconds {
+    padding: 10px;
+}
+
+.days h5, .hours h5, .minutes h5, .seconds h5 {
+    font-size: 20px;
+}
+
+.widget-Clock {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    background-color: #0b0e14;
+    border-radius: 10px;
+    margin: 5px;
+    opacity: 0.5;
+    filter: alpha(opacity=10); /* For IE8 and earlier */
+}
+
+.widget-Clock > .widgetClock-top {
+    height: 50%;
+    width: 100px;
+    background-color: #0b0e14;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #1a1f2d;
+}
+
+.widget-Clock h1 {
+    font-size: 86px;
+    color: springgreen;
+    position: relative;
+    top: -80px;
+}
+
+.widget-Clock h1:before {
+    content: " ";
+    display: block;
+    background: springgreen;
+    height: 10px;
+    width: 2px;
+    position: relative;
+    top: 52px;
+    left: -2px;
+    border-bottom-left-radius: 1px;
+    border-top-left-radius: 1px;
+}
+
+.widget-Clock h1:after {
+    content: " ";
+    display: block;
+    background: springgreen;
+    height: 10px;
+    width: 2px;
+    position: relative;
+    top: -52px;
+    left: 100px;
+    border-bottom-right-radius: 1px;
+    border-top-right-radius: 1px;
+}
+
+#greet {
+    margin-top: 50%;
+}
+
+.greetMessage, .agendaContent {
+
+    background-color: #f3f5f8;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: #363738;
+}
+
+.greetMessage h1, .agendaContent h1 {
+    font-family: Raleway, sans-serif;
+    color: #363738;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+hr {
+    width: 8%;
+    border: solid 1px;
+    margin-top: 18px;
+    margin-bottom: 25px;
+}
+
+hr {
+    border-color: #1bd982;
+}
+
+.greetMessage p {
+    font-size: 24px;
+}
+
+.participate {
+    margin: 30px;
+    cursor: pointer;
+    background-color: mediumspringgreen;
+}
+
+.participate h1 {
+    margin: 30px;
+}
+
+.participate a {
+    text-decoration: none;
+    color: white;
+}
+
+.subTitle {
+    margin: 5px;
+    font-size: 14px;
+}
+
+.agendaContent {
+    background-color: #212739;
+}
+
+.agendaContent h1 {
+    color: white;
+}
+
+.agendaAlign
+{
+    color: white;
+    padding-left:10%;
+}
+
+.agendaAlign p
+{
+    margin: 5px;
+    font-size: 22px;
+}
+
+.agendaAlignHover:hover
+{
+    background-color:#1d2333;
+    border-left: 2px solid springgreen;
+}
+
+.agendaAlign .row {
+    border-bottom: 1px dashed #373c4c;
+    margin-bottom: 0;
+    padding: 0.5em 0;
+    overflow: hidden;
+    -webkit-transition: background-color 300ms ease-out;
+    -moz-transition: background-color 300ms ease-out;
+    transition: background-color 300ms ease-out;
+}
+
+.fontAlignjustify
+{
+    text-align: justify;
+}
+
+.fontAlignright
+{
+    text-align: right;
+}
+
+.fontSize
+{
+    font-size: 16px;
+}
+
+.row .agendaAlignHover:last-child { border-bottom: none;  }
+
+#agendaCalc
+{
+    text-align: center;
+}
+
+.agendaCalcWidget
+{
+   padding: 50px;
+}
+
+
+.edition h1
+{
+    font-family: Raleway, sans-serif;
+    color: #363738;
+    font-size: 2.5em;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
+    .widgetContainer
+    {
+        background-color: Gainsboro    ;
+    }
+
+    .widget
+    {
+        text-align: center;
+        margin: 20px;
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 6px 2px -2px gray;
+        cursor: pointer;
+    }
+      .h1Class
+      {
+        position: relative;
+        bottom: 15px;
+        font-size: 72px;
+      }
+
+      .widget:hover
+      {
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.1);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.1);
+    transition: all 200ms ease-in;
+    transform: scale(1.1); 
+      }
+
+    .widget-top
+    {
+         border-top-right-radius: 10px;
+         text-align:center;
+         height: 30%;
+         padding: 5px;
+         font-size: 18px;
+         background-color: mediumspringgreen  ;
+         color: white;
+    }
+        
+    .widget-top::before
+    {
+        content: "\2022";
+        display: inline-block;
+        color:white;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+         
+    .widget-top::after
+    {
+        content: "\2022";
+        display: inline-block;
+        color:white;
+        margin-left: 10px;
+        margin-right: 10px;
+    
+    }
+
+    .rowLink
+    {
+        list-style: none;
+    }
+
+    .navcentre
+    {
+    height: 60px;
+    width: 100%;
+    }
+
+    .navcentre ul
+     {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center; 
+     }
+
+    .navcentre ul li {
+    list-style: none;
+    display: inline-block;    
+}
+
+.footerContent
+{
+    text-align: center;
+    margin-top: 30%;
+    background-color: #212739;
+    padding: 30px;
+    font-size: 20px;
+    color: springgreen;
+    
+}
+
+.footerContent a
+{
+    
+   text-decoration: none;
+}

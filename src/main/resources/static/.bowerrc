@@ -1,0 +1,6 @@
+{
+  "proxy":"http://10.100.1.124:3128",
+  "https-proxy":"http://10.100.1.124:3128",
+  "directory": "bower_components",
+  "json": "bower.json"
+}
