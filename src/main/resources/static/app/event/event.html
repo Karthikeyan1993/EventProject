@@ -146,14 +146,14 @@
                         <div class="col-md-12">
                             <div ng-repeat="ele in vm.item" class="row agendaAlignHover">
                                 <div class="col-md-4 fontAlignright">
-                                    <p ng-bind="ele.time"></p>
+                                    <p ng-bind="ele.aTime"></p>
                                 </div>
                                 <div class="col-md-2">
                                     <p>~</p>
                                 </div>
                                 <div class="col-md-4 fontAlignjustify">
-                                    <p ng-bind="ele.description"></p>
-                                    <p><small class="fontSize" ng-bind="ele.instructor"></small></p>
+                                    <p ng-bind="ele.a_desc"></p>
+                                    <p><small class="fontSize" ng-bind="ele.a_ins"></small></p>
                                 </div>
                             </div>
                         </div>
@@ -178,8 +178,8 @@
                         <div class="navcentre">
                             <ul class="child">
                                 <li ng-repeat="ele in vm.Agenda" class="rowLink widget">
-                                    <p class="widget-top"><span data-ng-bind="ele.month"></span></p>
-                                    <h1 class="h1Class"><span data-ng-bind="ele.date"></span></h1>
+                                    <p class="widget-top"><span data-ng-bind="ele.eMonth"></span></p>
+                                    <h1 class="h1Class"><span data-ng-bind="ele.eDate"></span></h1>
                                 </li>
                             </ul>
                         </div>

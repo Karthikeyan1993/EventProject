@@ -11,8 +11,14 @@ public class Event {
 	@Column(name = "EVENT_ID")
 	private Long eId;
 
+	@Column(name = "EVENT_DM")
+	private String eFullDte;
+
 	@Column(name = "EVENT_DTE")
 	private String eDate;
+
+	@Column(name = "EVENT_MON")
+	private String eMonth;
 
 	@Column(name = "EVENT_LOC")
 	private String eLocation;
@@ -29,19 +35,30 @@ public class Event {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Event(String eDate, String eLocation, Boolean eIsActive) {
+	public Event(String eFullDte, String eDate, String eMonth, String eLocation, Boolean eIsActive) {
 		super();
+		this.eFullDte = eFullDte;
 		this.eDate = eDate;
+		this.eMonth = eMonth;
 		this.eLocation = eLocation;
 		this.eIsActive = eIsActive;
+
 	}
 
-	public Long getId() {
+	public Long geteId() {
 		return eId;
 	}
 
-	public void setId(Long eid) {
-		eId = eid;
+	public void seteId(Long eId) {
+		this.eId = eId;
+	}
+
+	public String geteFullDte() {
+		return eFullDte;
+	}
+
+	public void seteFullDte(String eFullDte) {
+		this.eFullDte = eFullDte;
 	}
 
 	public String geteDate() {
@@ -50,6 +67,14 @@ public class Event {
 
 	public void seteDate(String eDate) {
 		this.eDate = eDate;
+	}
+
+	public String geteMonth() {
+		return eMonth;
+	}
+
+	public void seteMonth(String eMonth) {
+		this.eMonth = eMonth;
 	}
 
 	public String geteLocation() {
@@ -75,4 +100,5 @@ public class Event {
 	public void setAgenda(List<Agenda> agenda) {
 		this.agenda = agenda;
 	}
+
 }

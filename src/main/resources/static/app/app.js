@@ -1,5 +1,4 @@
-(function () {
-    'use strict';
-    angular.module('mainApp',
-        ['ui.router']);
+(function() {
+	'use strict';
+	angular.module('mainApp', [ 'ui.router' ]);
 })();

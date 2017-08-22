@@ -5,9 +5,29 @@
         var vm = this;
         vm.times = {};
         vm.Agenda = [];
+        vm.eDate;
         vm.item = [];
-        vm.Agenda = eventService.getAgenda();
         var promise;
+
+        activate();
+
+        function activate() {
+            return getAgenda().then(function () {
+                 vm.item=vm.Agenda[0].agenda;
+                 vm.eDate=vm.Agenda[0].eFullDte;
+                    updateClock();
+                    vm.start();
+                console.log('View Activated');
+            });
+        }
+
+        function getAgenda() {
+            return eventService.getAgenda()
+                .then(function (data) {
+                    vm.Agenda = data;
+                    return vm.Agenda;
+                });
+        }
 
         vm.start = function () {
             vm.stop();
@@ -18,17 +38,8 @@
             $interval.cancel(promise);
         };
 
-        updateClock();
-        vm.start();
-
-        initialLod(vm.Agenda);
-
-        function initialLod(Agenda) {
-            vm.item = Agenda[0].agenda;
-        }
-
         function updateClock() {
-            var eventDate = parseISOLocal("2017-08-21T18:00:00");
+            var eventDate = parseISOLocal(vm.eDate.toString());
             var dt = getRemainingTime(eventDate);
             vm.times = {
                 days: ('0' + dt.days).slice(-2),

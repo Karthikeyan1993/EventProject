@@ -10,7 +10,7 @@ public class Agenda {
 	private Long Id;
 
 	@Column(name = "AGENDA_TIM")
-	private String aTime;
+	private String a_time;
 
 	@Column(name = "AGENDA_DES")
 	private String a_desc;
@@ -19,7 +19,7 @@ public class Agenda {
 	private String a_ins;
 
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "EVENT_ID",updatable = false, insertable = true)
+	@JoinColumn(name = "EVENT_ID", updatable = false, insertable = true)
 	private Event event;
 
 	public Agenda() {
@@ -27,9 +27,9 @@ public class Agenda {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Agenda(String aTime, String a_desc, String a_ins) {
+	public Agenda(String a_time, String a_desc, String a_ins) {
 		super();
-		this.aTime = aTime;
+		this.a_time = a_time;
 		this.a_desc = a_desc;
 		this.a_ins = a_ins;
 	}
@@ -43,11 +43,11 @@ public class Agenda {
 	}
 
 	public String getaTime() {
-		return aTime;
+		return a_time;
 	}
 
 	public void setaTime(String aTime) {
-		this.aTime = aTime;
+		this.a_time = aTime;
 	}
 
 	public String getA_desc() {
