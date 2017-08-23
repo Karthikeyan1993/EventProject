@@ -11,6 +11,9 @@ public class Event {
 	@Column(name = "EVENT_ID")
 	private Long eId;
 
+	@Column(name = "EVENT_EDI")
+	private int eEdition;
+
 	@Column(name = "EVENT_DM")
 	private String eFullDte;
 
@@ -35,8 +38,9 @@ public class Event {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Event(String eFullDte, String eDate, String eMonth, String eLocation, Boolean eIsActive) {
+	public Event(int eEdition, String eFullDte, String eDate, String eMonth, String eLocation, Boolean eIsActive) {
 		super();
+		this.eEdition = eEdition;
 		this.eFullDte = eFullDte;
 		this.eDate = eDate;
 		this.eMonth = eMonth;
@@ -51,6 +55,14 @@ public class Event {
 
 	public void seteId(Long eId) {
 		this.eId = eId;
+	}
+
+	public int geteEdition() {
+		return eEdition;
+	}
+
+	public void seteEdition(int eEdition) {
+		this.eEdition = eEdition;
 	}
 
 	public String geteFullDte() {
