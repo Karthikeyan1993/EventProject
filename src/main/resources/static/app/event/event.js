@@ -71,7 +71,7 @@
             vm.eDate = vm.Agenda[index].eFullDte;
             vm.item = vm.Agenda[index].agenda;
             vm.start();
-            vm.editon = index;
+            vm.editon = vm.Agenda.length-index;
             var mydate = new Date(vm.eDate);
             vm.friendlyDate = monthNames[mydate.getMonth()] + " " + vm.Agenda[index].eDate + "," + mydate.getFullYear();
             ScrollService.scrollToTop();
