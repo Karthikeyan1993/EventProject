@@ -8,7 +8,7 @@
         };
 
         function getAgenda() {
-            return $http.get('http://localhost:8080/api/events')
+            return $http.get('https://eventproject.herokuapp.com/api/events')
                 .then(getAgendaSuccess)
                 .catch(getAgendaFailure);
 
