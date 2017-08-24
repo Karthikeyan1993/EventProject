@@ -21,26 +21,22 @@ public class EventController {
 	@Autowired
 	private EventService eventService;
 
-
 	@RequestMapping(method = RequestMethod.GET)
 	public List<Event> getAllEvents() {
 
 		return eventService.getAll();
 	}
 
-
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public void find(@PathVariable Long id) {
 		eventService.find(id);
 	}
-
 
 	@RequestMapping(method = RequestMethod.POST)
 	public Event Save(@RequestBody Event item) {
 		return eventService.save(item);
 
 	}
-
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public void delete(@PathVariable Long id) {

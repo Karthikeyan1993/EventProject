@@ -1,4 +1,4 @@
-(function () {
+(function() {
     'use strict';
 
     function eventService($http) {
@@ -8,7 +8,7 @@
         };
 
         function getAgenda() {
-            return $http.get('https://eventproject.herokuapp.com/api/events')
+            return $http.get('http://localhost:8080/api/events')
                 .then(getAgendaSuccess)
                 .catch(getAgendaFailure);
 
@@ -21,9 +21,9 @@
             };
 
         }
-        
+
     };
     angular.module('mainApp')
         .factory('eventService', eventService);
-        eventService.$inject = ['$http'];
+    eventService.$inject = ['$http'];
 })();

@@ -7,7 +7,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            <h1 class="animated bounceInDown"><b>codeathon</b>2017<span class="regi-Mark">&reg;</span>
+                            <h1 class="animated bounceInDown"><b>codeathon</b><span data-ng-bind="vm.friendlyDate.substring(vm.friendlyDate.length-4,vm.friendlyDate.length)"></span><span class="regi-Mark">&reg;</span>
                             </h1>
                         </div>
                     </div>
@@ -22,7 +22,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            <h6 class="animated fadeInRightBig" style="font-size: 32px;">11<sup>th</sup> edition,August 15,2017
+                            <h6 class="animated fadeInRightBig" style="font-size: 32px;"><span data-ng-bind="vm.editon"></span><sup>th</sup> edition,<span data-ng-bind="vm.friendlyDate"></span>
                             </h6>
                         </div>
                     </div>
@@ -177,7 +177,7 @@
                     <div class="row alignUlItems">
                         <div class="navcentre">
                             <ul class="child">
-                                <li ng-repeat="ele in vm.Agenda" class="rowLink widget">
+                                <li ng-repeat="ele in vm.Agenda" class="rowLink widget unselect" ng-click="vm.itemClick($index)">
                                     <p class="widget-top"><span data-ng-bind="ele.eMonth"></span></p>
                                     <h1 class="h1Class"><span data-ng-bind="ele.eDate"></span></h1>
                                 </li>
@@ -195,7 +195,7 @@
         <div class="row">
         <div class="col-md-12">
             <div class="row">
-                <p><a href="#">Geek Night Coimbatore</a> sponsored by <a target="_blank" href="https://thoughtworks.com/">ThoughtWorks</a></p>
+                <p><a href="#">Geek Night Coimbatore</a> sponsored by <a target="_blank" href="#">Codeathon</a></p>
             </div>
         </div>
         </div>

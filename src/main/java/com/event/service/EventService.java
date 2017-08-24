@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.event.bean.Event;
 
-
 public interface EventService {
 
 	public List<Event> getAll();

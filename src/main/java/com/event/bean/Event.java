@@ -9,10 +9,7 @@ public class Event {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "EVENT_ID")
-	private Long eId;
-
-	@Column(name = "EVENT_EDI")
-	private int eEdition;
+	private Long Id;
 
 	@Column(name = "EVENT_DM")
 	private String eFullDte;
@@ -26,43 +23,16 @@ public class Event {
 	@Column(name = "EVENT_LOC")
 	private String eLocation;
 
-	@Column(name = "EVENT_STS")
-	private Boolean eIsActive;
-
 	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
 	@JoinColumn(name = "EVENT_ID")
 	private List<Agenda> agenda;
 
-	public Event() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Event(int eEdition, String eFullDte, String eDate, String eMonth, String eLocation, Boolean eIsActive) {
-		super();
-		this.eEdition = eEdition;
-		this.eFullDte = eFullDte;
-		this.eDate = eDate;
-		this.eMonth = eMonth;
-		this.eLocation = eLocation;
-		this.eIsActive = eIsActive;
-
-	}
-
 	public Long geteId() {
-		return eId;
+		return Id;
 	}
 
-	public void seteId(Long eId) {
-		this.eId = eId;
-	}
-
-	public int geteEdition() {
-		return eEdition;
-	}
-
-	public void seteEdition(int eEdition) {
-		this.eEdition = eEdition;
+	public void seteId(Long Id) {
+		this.Id = Id;
 	}
 
 	public String geteFullDte() {
@@ -95,14 +65,6 @@ public class Event {
 
 	public void seteLocation(String eLocation) {
 		this.eLocation = eLocation;
-	}
-
-	public Boolean geteIsActive() {
-		return eIsActive;
-	}
-
-	public void seteIsActive(Boolean eIsActive) {
-		this.eIsActive = eIsActive;
 	}
 
 	public List<Agenda> getAgenda() {

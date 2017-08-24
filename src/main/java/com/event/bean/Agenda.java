@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Agenda {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long Id;
 
 	@Column(name = "AGENDA_TIM")
@@ -21,18 +21,6 @@ public class Agenda {
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "EVENT_ID", updatable = false, insertable = true)
 	private Event event;
-
-	public Agenda() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public Agenda(String a_time, String a_desc, String a_ins) {
-		super();
-		this.a_time = a_time;
-		this.a_desc = a_desc;
-		this.a_ins = a_ins;
-	}
 
 	public Long getId() {
 		return Id;
