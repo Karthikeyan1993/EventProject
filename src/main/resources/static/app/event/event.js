@@ -70,6 +70,7 @@
             console.log(JSON.stringify(vm.Agenda[index]));
             vm.eDate = vm.Agenda[index].eFullDte;
             vm.item = vm.Agenda[index].agenda;
+            vm.start();
             vm.editon = index;
             var mydate = new Date(vm.eDate);
             vm.friendlyDate = monthNames[mydate.getMonth()] + " " + vm.Agenda[index].eDate + "," + mydate.getFullYear();
