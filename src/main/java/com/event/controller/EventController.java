@@ -14,7 +14,7 @@ import com.event.bean.Event;
 import com.event.service.EventService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:10001", maxAge = 3600)
+@CrossOrigin(origins = "https://eventproject.herokuapp.com", maxAge = 3600)
 @RequestMapping("api/events")
 public class EventController {
 
